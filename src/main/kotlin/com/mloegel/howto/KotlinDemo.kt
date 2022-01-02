@@ -13,15 +13,12 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
 
-
 @SpringBootApplication
-class HowtoApplication
+class KotlinDemo
 
 fun main(args: Array<String>) {
-	runApplication<HowtoApplication>(*args)
+	runApplication<KotlinDemo>(*args)
 }
-
-
 
 @RestController
 class MessageResource(val service: MessageService) {
@@ -32,7 +29,6 @@ class MessageResource(val service: MessageService) {
 	fun post(@RequestBody message: Message) {
 		service.post(message)
 	}
-
 }
 
 @Table("MESSAGES")
